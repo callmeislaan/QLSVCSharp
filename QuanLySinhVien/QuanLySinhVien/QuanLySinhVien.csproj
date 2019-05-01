@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A65ACA83-E968-4A4C-976B-EF3EE64B7F61}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QuanLySinhVien</RootNamespace>
+    <AssemblyName>QuanLySinhVien</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\DangNhapBLL.cs" />
+    <Compile Include="BLL\DsSVLopCoDinhBLL.cs" />
+    <Compile Include="BLL\DsSVLopMonHocBLL.cs" />
+    <Compile Include="BLL\GiangVienBLL.cs" />
+    <Compile Include="BLL\KhoaBLL.cs" />
+    <Compile Include="BLL\LopCoDinhBLL.cs" />
+    <Compile Include="BLL\LopMonHocBLL.cs" />
+    <Compile Include="BLL\MonHocBLL.cs" />
+    <Compile Include="BLL\NVPhongDaoTaoBLL.cs" />
+    <Compile Include="BLL\SinhVienBLL.cs" />
+    <Compile Include="Class\GiangVien.cs" />
+    <Compile Include="Class\Khoa.cs" />
+    <Compile Include="Class\LopCoDinh.cs" />
+    <Compile Include="Class\LopMonHoc.cs" />
+    <Compile Include="Class\MaTuDong.cs" />
+    <Compile Include="Class\MonHoc.cs" />
+    <Compile Include="Class\Nguoi.cs" />
+    <Compile Include="Class\SinhVien.cs" />
+    <Compile Include="Class\SVLopCoDinh.cs" />
+    <Compile Include="Class\SVLopMonHoc.cs" />
+    <Compile Include="DAL.cs" />
+    <Compile Include="GUI\FormDsSinhVienLopCoDinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormDsSinhVienLopCoDinh.Designer.cs">
+      <DependentUpon>FormDsSinhVienLopCoDinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormDangNhap.Designer.cs">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormNvPhongDaoTao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormNvPhongDaoTao.Designer.cs">
+      <DependentUpon>FormNvPhongDaoTao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FormDsSinhVienLopMonHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\FormDsSinhVienLopMonHoc.Designer.cs">
+      <DependentUpon>FormDsSinhVienLopMonHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UcGiangVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UcGiangVien.Designer.cs">
+      <DependentUpon>UcGiangVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UcKhoa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UcKhoa.Designer.cs">
+      <DependentUpon>UcKhoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UcLopHoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UcLopHoc.Designer.cs">
+      <DependentUpon>UcLopHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UcLopMonHoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UcLopMonHoc.Designer.cs">
+      <DependentUpon>UcLopMonHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UcMonHoc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UcMonHoc.Designer.cs">
+      <DependentUpon>UcMonHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UcSinhVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UcSinhVien.Designer.cs">
+      <DependentUpon>UcSinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\UcThongTinNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\UcThongTinNhanVien.Designer.cs">
+      <DependentUpon>UcThongTinNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\FormDsSinhVienLopCoDinh.resx">
+      <DependentUpon>FormDsSinhVienLopCoDinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormDangNhap.resx">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormDsSinhVienLopMonHoc.resx">
+      <DependentUpon>FormDsSinhVienLopMonHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FormNvPhongDaoTao.resx">
+      <DependentUpon>FormNvPhongDaoTao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UcGiangVien.resx">
+      <DependentUpon>UcGiangVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UcKhoa.resx">
+      <DependentUpon>UcKhoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UcLopHoc.resx">
+      <DependentUpon>UcLopHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UcLopMonHoc.resx">
+      <DependentUpon>UcLopMonHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UcMonHoc.resx">
+      <DependentUpon>UcMonHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UcSinhVien.resx">
+      <DependentUpon>UcSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\UcThongTinNhanVien.resx">
+      <DependentUpon>UcThongTinNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\icons8-view-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\icons8-student-male-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\icons8-student-male-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\icons8-class-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\icons8-elective-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\icons8-school-director-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\icons8-university-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\icons8-classroom-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\University.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\1546842559282.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\haui.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\5623_4428_20449247_1446677342065755_3831608003092008641_o.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\hai.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\hai1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\haui1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\haui2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\haui3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\icons8-exit-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\icons8-plus-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\icons8-reset-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\icons8-search-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\icons8-select-all-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\icons8-wrench-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\icons8-synchronize-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\icons8-delete-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\icons8-search-10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\icons8-search-25.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
